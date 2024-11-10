@@ -77,10 +77,7 @@ export default function ContactSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <button
-                  type="submit"
-                  className="contact-button"
-                >
+                <button type="submit" className="contact-button">
                   SEND IT
                 </button>
               </motion.div>
@@ -99,12 +96,12 @@ export default function ContactSection() {
               alt="Contact"
               fill
               className="contact-image"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 40vw"
               priority
             />
           </motion.div>
         </div>
       </div>
-    </section>
+      </section>
   );
 }
