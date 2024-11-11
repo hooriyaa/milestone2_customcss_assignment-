@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaGithub,
+} from "react-icons/fa";
 import logo from "../../public/logo2.jpeg";
 
 const navItems = ["Home", "About", "Portfolio", "Contact"];
@@ -17,14 +23,13 @@ export default function Menu() {
     document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
-
   return (
     <div className="mobile-menu-container">
       <button onClick={toggleMenu} className="menu-toggle-button">
         <CgMenuRightAlt className="menu-icon" />
       </button>
 
-      <div 
+      <div
         className={`slide-menu ${isOpen ? "open" : ""}`}
         // onClick={handleOutsideClick}
       >
@@ -67,8 +72,12 @@ export default function Menu() {
               <FaFacebook className="social-icon facebook" />
             </Link>
             <Link href="#" className="social-link">
+              <FaGithub className="social-icon github" />
+            </Link>
+            <Link href="#" className="social-link">
               <FaTwitter className="social-icon twitter" />
             </Link>
+
             <Link href="#" className="social-link">
               <FaInstagram className="social-icon instagram" />
             </Link>
@@ -79,4 +88,5 @@ export default function Menu() {
         </div>
       </div>
     </div>
-  )}
+  );
+}
